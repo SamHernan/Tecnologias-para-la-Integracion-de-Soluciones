@@ -48,8 +48,8 @@ public class CalculadoraConfig extends WsConfigurerAdapter{
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         // config.setAllowCredentials(true);
-        config.addAllowedOrigin("");
-        config.addAllowedHeader("");
+        config.addAllowedOrigin("*");
+        config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         source.registerCorsConfiguration("/**", config);
         FilterRegistrationBean bean = new FilterRegistrationBean(new CorsFilter(source));
